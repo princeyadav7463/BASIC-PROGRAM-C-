@@ -1,15 +1,17 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-	int i=1,n,x,sum=0;
-	printf("Enter any number =");
-	scanf("%d",&n);
-	while(i<=n)
+	int a[]={10,52,6,5,2};
+	int n=sizeof(a)/sizeof(int);
+	int i,sum;
+	printf("Display array element=\n");
+	for(i=0;i<=n;i++)
 	{
-		sum=sum+pow(x,i);
-		i++;
+		if(a[i]%2==0)
+		{
+		   sum=sum+a[i];
+		}
 	}
-	printf("sum of series=%d",sum);
+		printf("%d\n",a[i]);
 	return 0;
 }

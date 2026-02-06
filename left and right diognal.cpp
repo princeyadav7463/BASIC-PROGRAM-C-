@@ -1,0 +1,66 @@
+#include<stdio.h>
+int main()
+{
+	int a[3][3],b[3][3],c[3][3],i,j,d1=0,d2=0;
+	printf("Enter the first matrix elements are=\n");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("Enter the seconds matrix elements are=\n");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			scanf("%d",&b[i][j]);
+		}
+	}
+	printf("first matrix elements are =\n");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("seconds matrix elements are=\n");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("thirds matrix elements are=\n");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			c[i][j]=a[i][j]+b[i][j];
+			printf("%d\t",c[i][j]);
+		}
+		printf("\n");
+	}
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(i==j)
+			{
+				d1=d1+c[i][j];
+			}
+			if(i+j==2)
+			{
+				d2=d2+c[i][j];
+			}
+		}
+	}
+	printf("sum of left diognal of matrix elements are=%d\n",d1);
+	printf("sum of right diognal of matrix elements are=%d\n",d2);
+	return 0;
+}

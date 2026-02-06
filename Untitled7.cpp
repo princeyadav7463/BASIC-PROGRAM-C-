@@ -1,22 +1,25 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-	int a[3][3]={{9,2,3},{5,4,2},{8,9,6}};
-	int i,j,sum=0;
-	printf("print array element=\n");
-	for(i=0;i<3;i++)
+	int a[10],i;
+	a[0]=4;
+	a[1]=5;
+	a[2]=51;
+	a[3]=52;
+	a[4]=54;
+	a[5]=33;
+	a[6]=11;
+	a[7]=22;
+	a[8]=20;
+	a[9]=10;
+	printf("Display array element=");
+	for(i=0;i<=9;i++)
 	{
-		for(j=0;j<3;j++)
+		if(a[i]%2==0)
 		{
-			printf("%d\t",a[i][j]);
-			if(a[i][j]%2==0)
-			 {
-			 	sum=sum+a[i][j];
-			 }
+			printf("Even number=%d",i);
 		}
 		printf("\n");
 	}
-	printf("sum of series Even number=%d",sum);
 	return 0;
 }

@@ -1,14 +1,16 @@
-*#include<stdio.h>
+#include<stdio.h>
 int main()
 {
-	int a[3][3]={{1,4,5},{6,9,7},{8,4,6}};
-	int i,j;
-	printf("print array element=\n");
-	for(i=0;i<3;i++)
+	int i,j,k;
+	for(i=1;i<=5;i++)
 	{
-		for(j=0;j<3;j++)
+	for(k=1;k<i;k++)
+	{
+		printf(" ");
+	} 
+		for(j=5;j>=i;j--)
 		{
-			printf("%d\t",a[i][j]);
+			printf("*");
 		}
 		printf("\n");
 	}

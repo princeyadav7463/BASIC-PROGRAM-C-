@@ -1,21 +1,27 @@
 #include<stdio.h>
 int main()
 {
-	int i=1,n,sum=0;
-	printf("Enter any number=");
-	scanf("%d",&n);
-	while(i<=n)
+	int a[10],i,sum=0;
+	a[0]=1;
+	a[1]=3;
+    a[2]=5;
+	a[3]=4;
+	a[4]=8;
+	a[5]=7;
+	a[6]=6;
+	a[7]=8;
+	a[8]=7;
+	a[9]=3;
+	printf("display array elements\n");
+	for(i=0;i<=9;i++)
 	{
-		if(i%2==0)
+		if(i>0)
 		{
-			sum=sum-i;
+		
+				
 		}
-		else
-		{
-		   sum=sum+i;
-	    }
-		i++;
+	
 	}
-	printf("sum of seires=%d",sum);
+	printf(" higest number=%d",i);
 	return 0;
 }

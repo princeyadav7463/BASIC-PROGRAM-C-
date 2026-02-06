@@ -1,19 +1,20 @@
-/* write a program to input element in 3*3 matrix and print 
-3*2
-4*4
-2*4
-*/
 #include<stdio.h>
 int main()
 {
-	int a[3][2]={{4,5},{9,7},{3,4}};
-	int i,j;
-	printf("print array element=\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<2;j++)
+	int i,j,k;
+    for(i=1;i<=5;i++)
+    {
+    	for(k=i;k<5;k++)
+    	{
+    		printf(" ");
+		}
+		for(j=1;j<=i;j++)
 		{
-			printf("%d\t",a[i][j]);
+			printf("*");
+		}
+		for(j=i-1;j>=1;j--)
+		{
+			printf("*");
 		}
 		printf("\n");
 	}

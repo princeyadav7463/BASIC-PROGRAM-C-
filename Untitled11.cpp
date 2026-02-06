@@ -1,14 +1,12 @@
 #include<stdio.h>
 int main()
 {
-	int i=1,n,sum=0;
-	printf("Enter any number=");
-	scanf("%d",&n);
-	while(i<=n)
-	{
-		sum=sum+i*i*i;
-		i++;
-	}
-	printf("sum of series=%d",sum);
+	float r,h,vol;
+	printf("Enter value of r=");
+	scanf("%f",&r);
+	printf("Enter value of h=");
+	scanf("%f",&h);
+	vol= 1%3*3.145*r*r*h;
+	printf("volume of cone=%f",vol);
 	return 0;
 }
