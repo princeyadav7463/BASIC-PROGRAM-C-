@@ -1,15 +1,30 @@
+/*  *****          print partten
+ 	*	*
+ 	*****
+ 	*	*
+ 	*	*
+ 	
+ 	*/
+
+
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
-	int rem,rev,n;
-	printf("Enter any number=");
-	scanf("%d",n);
-	if(n>0)
+	int i,j;
+	for(i=1;i<=5;i++)
 	{
-		rem=n%10;
-	rev=rev*10+rem;
-		n=n/10;
+		for(j=1;j<=5;j++)
+		{
+			if(i==1||j==1||i==3||j==5)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
 	}
-	printf("\n reverse of digit of %d=",n,rev);
+	return 0;
 }

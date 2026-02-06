@@ -1,14 +1,21 @@
 #include<stdio.h>
 int main()
 {
-	int n,r,i,s=0;
-	printf("Enter any number");
-	scanf("%d",&n);
-	for(i=1;n==0;i++)
+	int i,j;
+	for(i=1;i<=5;i++)
 	{
-		r=n%10;
-		s=s+r;
-		n=n/10;
+		for(j=1;j<=5;j++)
+		{
+			if(i==1||j==1||i==5||j==5||i==3)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
 	}
-	printf("sum of digit=%d",s);
+	return 0;
 }
