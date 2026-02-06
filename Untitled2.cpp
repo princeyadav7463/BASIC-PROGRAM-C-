@@ -1,16 +1,15 @@
 #include<stdio.h>
-#include<math.h>
+#include<stdio.h>
 int main()
 {
-	float x,y,res;
-	printf("Enter the value of x=");
-	scanf("%f",&x);
-	
-	printf("Enter the value of y=");
-	scanf("%f",&y);
-	
-	res=sqrt((pow(x,2)+pow(y,2)/(x+y)));
-	printf("squre root=%f",res);
-	
-	return 0;
+	int n,rem,sum=0;
+	printf("Enter any number=");
+	scanf("%d",n);
+	if(n>=0)
+	{
+		rem=n%10;
+		sum=sum+rem;
+		n=n/10;
+    }
+    printf("\n sum of digit of =%d",n,sum);
 }

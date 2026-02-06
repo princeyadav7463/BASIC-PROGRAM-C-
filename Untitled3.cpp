@@ -1,20 +1,15 @@
 #include<stdio.h>
-#include<math.h>
+#include<conio.h>
 int main()
 {
-	float a,b,c,res;
-	
-	printf("Enter the value of a=");
-	scanf("%f",&a);
-	
-	printf("Enter the value of b=");
-	scanf("%f",&b);
-	
-	printf("Enter the value of c=");
-	scanf("%f",&c);
-	
-	res=sqrt(a+b+c)/2;
-	printf("squre root = %f",res);
-	
-	return 0;
+	int rem,rev,n;
+	printf("Enter any number=");
+	scanf("%d",n);
+	if(n>0)
+	{
+		rem=n%10;
+	rev=rev*10+rem;
+		n=n/10;
+	}
+	printf("\n reverse of digit of %d=",n,rev);
 }

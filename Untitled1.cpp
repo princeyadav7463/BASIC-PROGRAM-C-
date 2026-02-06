@@ -1,17 +1,14 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-	float x,y,res;
-	printf("Enter the value of x=");
-	scanf("%f",&x);
-	
-	printf("Enter the value of y=");
-	scanf("%f",&y);
-	
-	res=sqrt(pow(x,2))/(pow(y,2));
-	
-	printf("root=%f",res);
-	
-	return 0;
+	int n,r,i,s=0;
+	printf("Enter any number");
+	scanf("%d",&n);
+	for(i=1;n==0;i++)
+	{
+		r=n%10;
+		s=s+r;
+		n=n/10;
+	}
+	printf("sum of digit=%d",s);
 }
