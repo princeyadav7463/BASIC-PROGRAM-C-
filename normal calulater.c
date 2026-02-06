@@ -2,11 +2,13 @@
 #include<stdlib.h>
 int main()
 {
-	int
-	 x,y,res;
-	if(choice1==1)
-	{
-	   printf("===basic calculator===\n");
+	int choice2;
+	
+		float x,y,res;		
+	   while(1)
+	   {
+	   
+	   printf("\n===basic calculator===\n");
 	   printf("1.add\n");
 	   printf("2.sub\n");
 	   printf("3.multi\n");
@@ -22,7 +24,7 @@ int main()
 		 printf("enter second number=");
 		 scanf("%f",&y);
 		 res=x+y;
-		 printf("add=f",res);
+		 printf("add=%f",res);
 		 	
 	   }
 	   else if(choice2==2)
@@ -33,7 +35,6 @@ int main()
 	   	scanf("%f",&y);
 	   	res=x-y,res;
 	   	printf("sub=%f",res);
-	   	
 	    }
 	    else if(choice2==3)
 		{
@@ -55,5 +56,11 @@ int main()
 			printf("div=%f",res);
 			
 		}
+		else if(choice2==0){
+			exit(0);
+		}else{
+			printf("Please enter valid choice....\n");
+		}
 	}
+	return 0;
 }
