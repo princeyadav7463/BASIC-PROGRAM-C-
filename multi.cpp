@@ -1,18 +1,15 @@
 #include<stdio.h>
-int multi();
+void multi(int , int);
 int main()
 {
-	int r=multi();
-	printf("multi=%d\n",r);
-	printf("multi=%d\n",multi());
+	multi(4 ,8);
+	multi(8 ,3);
+	
 	
 	return 0;
 }
-int multi()
-{ 
-	int a,b,c;
-	printf("Enter any number=\n");
-	scanf("%d%d",&a,&b);
-	c=a*b;
-	return c;
+void multi(int x , int y)
+{
+	int z=x*y;
+	printf("multiply of two number=%d\n",z);
 }

@@ -11,5 +11,9 @@ int main()
 }
 void volume()
 {
-	float 
+	int a , vol;
+	printf("Enter the value of a=");
+	scanf("%d",&a);
+	vol=a*a*a;
+	printf("Volume of cube =%d\n",vol);
 }

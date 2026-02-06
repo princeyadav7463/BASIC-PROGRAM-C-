@@ -1,18 +1,16 @@
 #include<stdio.h>
-int div();
+void div();
 int main()
 {
-	int r=div();
-	printf("div=%d\n",r);
-	printf("div=%d\n",div());
-	
+	div();
+	div();
 	return 0;
 }
-int div()
+void div()
 {
-	int a,b,c;
-	printf("Enter any number=\n");
-	scanf("%d%d",&a,&b);
+	float a , b, c;
+	printf("\nEnter any two number=\n");
+	scanf("%f%f",&a,&b);
 	c=a/b;
-	return c;
+	printf("divided of two number=%f\n",c);
 }

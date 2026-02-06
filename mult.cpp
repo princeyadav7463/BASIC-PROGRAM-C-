@@ -1,16 +1,16 @@
 #include<stdio.h>
-void sub();
+void mult();
 int main()
 {
-	sub();
-	sub();
+	mult();
+	mult();
 	return 0;
 }
-void sub()
+void mult()
 {
 	int a , b, c;
 	printf("\nEnter any two number=\n");
 	scanf("%d%d",&a,&b);
-	c=a-b;
-	printf("subtract of two number=%d\n",c);
+	c=a*b;
+	printf("multiply of two number=%d\n",c);
 }

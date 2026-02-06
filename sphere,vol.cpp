@@ -11,5 +11,9 @@ int main()
 }
 void volume()
 {
-	float 
+	float r,vol;
+	printf("Enter the value of r=");
+	scanf("%f",&r);
+	vol=4/3*3.145*r*r*r;
+	printf("volume of sphere=%f\n",vol);
 }

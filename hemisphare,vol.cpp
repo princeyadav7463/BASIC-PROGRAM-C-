@@ -11,5 +11,9 @@ int main()
 }
 void volume()
 {
-	float 
+	int r,vol;
+	printf("Enter the value of r=");
+	scanf("%d",&r);
+	vol=2%3*3.145*r*r*r;
+	printf("volume of hemisphare=%d\n",vol);
 }
