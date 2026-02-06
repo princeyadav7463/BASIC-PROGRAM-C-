@@ -1,19 +1,20 @@
 #include<stdio.h>
-#include<conio.h>
+#include<math.h>
 int main()
 {
-	char c;
-	printf("Enter any character=");
-	c=getch();
-	if(c>=97&&c<=122)
-	{
-		putch(c);
-		printf(" is lower case letter");
- 	}
- 	else
- 	{
- 		putch(c);
-		 printf(" is not lower case letter");	
-	}
+	float a,b,c,res;
+	
+	printf("Enter the value of a=");
+	scanf("%f",&a);
+	
+	printf("Enter the value of b=");
+	scanf("%f",&b);
+	
+	printf("Enter the value of c=");
+	scanf("%f",&c);
+	
+	res=sqrt(a+b+c)/2;
+	printf("squre root = %f",res);
+	
 	return 0;
 }

@@ -1,15 +1,16 @@
 #include<stdio.h>
 int main()
 {
-	int i,j,table;
-	for(i=1;i<=10;i++);
+	int i=1,n,sum=0;
+	printf("Enter any number=");
+	scanf("%d",&n);
+	while(i<=n)
 	{
-	  for(j=1;j<=10;j++)
-	  {
-	  		table=i*j;
-		printf("%d\t",table);
-	  }
-	  printf("\n");
+		if(i%2!=0)
+		{
+		  sum=sum+i;
+		}
+		i++;
 	}
-	return 0;
+	printf("sum of series=%d",sum);
 }

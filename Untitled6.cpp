@@ -1,34 +1,17 @@
 #include<stdio.h>
-void show(int[],int);
-int count(int[],int);
+#include<math.h>
 int main()
 {
-	int a[]={3,22,5,4,6,7,5,4,3,32,55,33,66,99};
-	int n= sizeof(a)/sizeof(int);
-	int res;
-	printf("print array element=\n");
-	show(a,n);
-	res=count(a,n);
-	printf("count of odd array in elemetns=%d",res);
+	float x,y,res;
+	
+	printf("Enter the value of x=");
+	scanf("%f",&x);
+	
+	printf("Enter the value of y=");
+	scanf("%f",&y);
+	
+	res=sqrt(pow(x,2)+pow(y,2))/pow(x,2);
+	printf("squre root =%f",res);
+	
 	return 0;
-}
-void show(int a[],int n)
-{
-	int i;
-	for(i=0;i<n;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-}
-int count(int a[],int n)
-{
-	int count=0,i;
-	for(i=0;i<n;i++)
-	{
-		if(a[i]%2!=0)
-		{
-			count=count+1;
-		}
-	}
-	return count;
 }

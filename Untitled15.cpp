@@ -1,17 +1,16 @@
+/*(1/2+2/3+3/4+..............n/n */)
+
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-	int a[]={10,52,6,5,2};
-	int n=sizeof(a)/sizeof(int);
-	int i,sum;
-	printf("Display array element=\n");
-	for(i=0;i<=n;i++)
+	float i=1,n,sum=0;
+	printf("Enter any number=");
+	scanf("%f",&n);
+	while(i<=n)
 	{
-		if(a[i]%2==0)
-		{
-		   sum=sum+a[i];
-		}
+		sum=sum+(i/(i+1));
+		i++;
 	}
-		printf("%d\n",a[i]);
-	return 0;
+	printf("sum of series %f",sum);
 }

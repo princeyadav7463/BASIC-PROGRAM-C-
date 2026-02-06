@@ -1,34 +1,23 @@
 #include<stdio.h>
-void show(int[],int);
-int sum(int[],int);
+#include<math.h>
 int main()
 {
-	int a[]={3,2,5,6,33,25,83};
-	int n= sizeof(a)/sizeof(int);
-	int res;
-	printf("print array element=\n");
-	show(a,n);
-	res=sum(a,n);
-	printf("sum of odd array in elemetns=%d",res);
+	float s,a,b,c,res;
+	
+	printf("Enter the value of s=");
+	scanf("%f",&s);
+	
+	printf("Enter the value of a=");
+	scanf("%f",&a);
+	
+	printf("Enter the value of b=");
+	scanf("%f",&b);
+	
+	printf("Enter the value of c=");
+	scanf("%f",&c);
+	
+	res=sqrt(pow(s*(s-a)*(s-b)*(s-c)));
+	printf("squre root = %f",res);
+	
 	return 0;
-}
-void show(int a[],int n)
-{
-	int i;
-	for(i=0;i<n;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-}
-int sum(int a[],int n)
-{
-	int sum=0,i;
-	for(i=0;i<n;i++)
-	{
-		if(a[i]%2!=0)
-		{
-			sum=sum+1;
-		}
-	}
-	return sum;
 }

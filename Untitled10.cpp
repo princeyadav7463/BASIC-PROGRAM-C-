@@ -1,34 +1,24 @@
 #include<stdio.h>
-void show(int[],int);
-int count(int[],int);
+#include<math.h>
 int main()
 {
-	int a[]={-3,2,6,88,5,-6,7,-3,2,-8};
-	int n= sizeof(a)/sizeof(int);
-	int res;
-	printf("print array element=\n");
-	show(a,n);
-	res=count(a,n);
-	printf("count of positive array in elemetns=%d",res);
+	float x,y,m,n,res;
+	
+	printf("Enter the value of x=");
+	scanf("%f",&x);
+	
+	printf("Enter the value of y=");
+	scanf("%f",&y);
+	
+	printf("Enter the value of m=");
+	scanf("%f",&m);
+	
+	printf("Enter the value of n=");
+	scanf("%f",&n);
+	
+	
+	res=(pow(x,m))+(pow(y,m));
+	printf("result is = %f",res);
+	
 	return 0;
-}
-void show(int a[],int n)
-{
-	int i;
-	for(i=0;i<n;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-}
-int count(int a[],int n)
-{
-	int count=0,i;
-	for(i=0;i<n;i++)
-	{
-		if(a[i]<0)
-		{
-			count=count+1;
-		}
-	}
-	return count;
 }
