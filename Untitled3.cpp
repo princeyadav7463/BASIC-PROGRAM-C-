@@ -1,22 +1,19 @@
 #include<stdio.h>
+#include<conio.h>
 int main()
 {
-	int i,j,k;
-    for(i=1;i<=5;i++)
-    {
-    	for(k=i;k<5;k++)
-    	{
-    		printf(" ");
-		}
-		for(j=1;j<=i;j++)
-		{
-			printf("*");
-		}
-		for(j=i-1;j>=1;j--)
-		{
-			printf("*");
-		}
-		printf("\n");
+	char c;
+	printf("Enter any character=");
+	c=getch();
+	if(c>=97&&c<=122)
+	{
+		putch(c);
+		printf(" is lower case letter");
+ 	}
+ 	else
+ 	{
+ 		putch(c);
+		 printf(" is not lower case letter");	
 	}
 	return 0;
 }

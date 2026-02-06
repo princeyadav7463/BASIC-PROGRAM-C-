@@ -2,7 +2,7 @@
 #include<math.h>
 int main()
 {
-	int n,m,r,s=0;
+	int n,r,m,s=0;
 	printf("Enter your number=");
 	scanf("%d",&n);
 	m=n;
@@ -17,8 +17,8 @@ int main()
 		printf("\n %d is armstrong number",m);
 	}
 	else
-	{
-		printf("\n %d is not armstrong number",m);
+	{ 
+		printf("\n %d is not armstong number",m);
 	}
 	return 0;
 }

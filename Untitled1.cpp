@@ -1,27 +1,17 @@
 #include<stdio.h>
+#include<conio.h>
 int main()
 {
-	int a[10][10],i,j,col,row;
-	printf("Enter the size of row=\n");
-	scanf("%d",&row);
-	printf("Enter the size of column=\n");
-	scanf("%d",&col);
-	printf("Enter the %d matrix elements are=\n");
-	for(i=0;i<row;i++)
+	int c;
+	printf("Enter any character=");
+	c=getch();
+	if(c>=65&&c<=90||c>=97&&c<=122)
 	{
-		for(j=0;j<col;j++)
-		{
-			scanf("%d",&a[i][j]);
-		}
+		printf("%c is alphabet",c);
 	}
-	printf("Matrix elements are=\n");
-	for(i=0;i<row;i++)
+	else
 	{
-		for(j=0;j<col;j++)
-		{
-			printf("%d\t",a[i][j]);
-		}
-		printf("\n");
+		putch(c);
+		printf("  is not alphabets");
 	}
-	return 0;
 }

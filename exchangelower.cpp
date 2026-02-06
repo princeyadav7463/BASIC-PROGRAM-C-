@@ -1,19 +1,18 @@
 #include<stdio.h>
 #include<conio.h>
+#include<ctype.h>
 int main()
 {
 	char c;
 	printf("Enter any character=");
 	c=getch();
-	if(c>=65&&c<=90||c>=48&&c<=57||c>=97&&c<=122||c==32)
+	if(islower(c))
 	{
-		putch(c);
-		printf(" is not symbole");
+		printf("%c is lower case letter",c);
 	}
 	else
 	{
-		putch(c);
-		printf(" is symbole");
+		printf("%c is not lower case letter",c);
 	}
 	return 0;
 }
