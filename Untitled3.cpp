@@ -1,15 +1,21 @@
+/* write a program to input element in 3*3 matrix and print 
+3*2
+4*4
+2*4
+*/
 #include<stdio.h>
 int main()
 {
-	int i=1,sum=0;
-	while(i<=10)
+	int a[3][2]={{4,5},{9,7},{3,4}};
+	int i,j;
+	printf("print array element=\n");
+	for(i=0;i<3;i++)
 	{
-		if(i%2!=0)
+		for(j=0;j<2;j++)
 		{
-			sum=sum+i;
+			printf("%d\t",a[i][j]);
 		}
-		i++;
+		printf("\n");
 	}
-	printf("sum of series odd number=%d",sum);
 	return 0;
 }
