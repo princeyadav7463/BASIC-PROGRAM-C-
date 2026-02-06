@@ -1,63 +1,34 @@
 #include<stdio.h>
+void show(int[],int);
+int count(int[],int);
 int main()
 {
-	int a[3][3],b[3][3],c[3][3],i,j,sum=0;
-	printf("Enter the first matrix elements are=\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-		{
-			scanf("%d",&a[i][j]);
-		}
-	}
-	printf("Enter the seconds matrix elements are=\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-		{
-			scanf("%d",&b[i][j]);
-		}
-	}
-	printf("first matrix elements are =\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-		{
-			printf("%d\t",a[i][j]);
-		}
-		printf("\n");
-	}
-	printf("seconds matrix elements are=\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-		{
-			printf("%d\t",b[i][j]);
-		}
-		printf("\n");
-	}
-	printf("thirds matrix elements are=\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-		{
-			c[i][j]=a[i][j]+b[i][j];
-			printf("%d\t",c[i][j]);
-		}
-		printf("\n");
-	}
-	printf("sum of left diognal of matrix elements are=\n");
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-		{
-			if(i==j)
-			{
-				sum=sum+c[i][j];
-			}
-		}
-	}
-	printf("%d",sum);
+	int a[]={3,22,5,4,6,7,5,4,3,32,55,33,66,99};
+	int n= sizeof(a)/sizeof(int);
+	int res;
+	printf("print array element=\n");
+	show(a,n);
+	res=count(a,n);
+	printf("count of odd array in elemetns=%d",res);
 	return 0;
 }
-
+void show(int a[],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+}
+int count(int a[],int n)
+{
+	int count=0,i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]%2!=0)
+		{
+			count=count+1;
+		}
+	}
+	return count;
+}

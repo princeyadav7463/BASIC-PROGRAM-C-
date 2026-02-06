@@ -1,25 +1,34 @@
 #include<stdio.h>
+void show(int[],int);
+int count(int[],int);
 int main()
 {
-	int a[10],i;
-	a[0]=4;
-	a[1]=5;
-	a[2]=-51;
-	a[3]=52;
-	a[4]=54;
-	a[5]=-33;
-	a[6]=11;
-	a[7]=-22;
-	a[8]=20;
-	a[9]=-10;
-	printf("Display array element=");
-	for(i=0;i<=9;i++)
-	{
-		if(a[i]<=0)
-		{
-			printf("negative number=%d",i);
-		}
-		printf("\n");
-	}
+	int a[]={-3,2,6,88,5,-6,7,-3,2,-8};
+	int n= sizeof(a)/sizeof(int);
+	int res;
+	printf("print array element=\n");
+	show(a,n);
+	res=count(a,n);
+	printf("count of positive array in elemetns=%d",res);
 	return 0;
+}
+void show(int a[],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+}
+int count(int a[],int n)
+{
+	int count=0,i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]>0)
+		{
+			count=count+1;
+		}
+	}
+	return count;
 }

@@ -1,26 +1,34 @@
 #include<stdio.h>
+void show(int[],int);
+int count(int[],int);
 int main()
 {
-	int a[10],counting,i;
-    a[0]=12;
-	a[1]=1;
-	a[2]=4;
-	a[3]=5;
-	a[4]=65;
-	a[5]=8;
-	a[6]=59;
-	a[7]=41;
-	a[8]=2;
-	a[9]=6;
-	printf("Display array elements\n");
-	for(i=0;i<=9;i++)
+	int a[]={-3,2,6,88,5,-6,7,-3,2,-8};
+	int n= sizeof(a)/sizeof(int);
+	int res;
+	printf("print array element=\n");
+	show(a,n);
+	res=count(a,n);
+	printf("count of positive array in elemetns=%d",res);
+	return 0;
+}
+void show(int a[],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
 	{
-		if(a[i]%2==0)
+		printf("%d\n",a[i]);
+	}
+}
+int count(int a[],int n)
+{
+	int count=0,i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]<0)
 		{
-			printf("Even number=%d",i);
-			printf("\n");
+			count=count+1;
 		}
-		counting=i+1;
-	}	
-	printf("Only even number counting=%d",counting);
+	}
+	return count;
 }

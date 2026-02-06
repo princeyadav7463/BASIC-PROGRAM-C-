@@ -1,38 +1,41 @@
 #include<stdio.h>
+void show(int[2][2],int ,int);
+void odd(int[2][2],int ,int);
 int main()
 {
-	int a[10][10],i,j,row,col;
-	printf("Enter the size of row=");
-	scanf("%d",&row);
-	printf("Enter the size of column=");
-	scanf("%d",&col);
-	printf("Enter the %d matrix elements are=\n",(row*col));
+	int a[2][2]={{3,6},{4,9}};
+	int row=2,col=2;
+	printf("print matrix elements =\n");
+	show(a,row,col);
+	odd(a,row,col);
+	
+	return 0;
+}
+void show(int x[2][2],int row,int col)
+{
+	int i,j;
 	for(i=0;i<row;i++)
 	{
 		for(j=0;j<col;j++)
 		{
-			scanf("%d",&a[i][j]);
-		}
-	}
-	printf("Matrix elements are=\n");
-	for(i=0;i<row;i++)
-	{
-		for(j=0;j<col;j++)
-		{
-			printf("%d\t",a[i][j]);
+			printf("%d\t",x[i][j]);
 		}
 		printf("\n");
 	}
-	printf("Odd number in this matrix elements are=\n");
+}
+void odd(int x[2][2],int row ,int col)
+{
+	int odd ,i,j;
+	printf("odd number print=\n");
 	for(i=0;i<row;i++)
 	{
 		for(j=0;j<col;j++)
 		{
-			if(a[i][j]%2!=0)
+			if(x[i][j]%2!=0)
 			{
-				printf("%d\t",a[i][j]);
+				printf("%d\t",x[i][j]);
 			}
 		}
 	}
-	return 0;
+	printf("\n odd of matrix element =%d\n",x[i][j]);
 }

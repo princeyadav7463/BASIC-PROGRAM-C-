@@ -1,15 +1,10 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 int main()
 {
-	int i=1,n,sum=0;
-	cout<<"Enter any number=";
-	cin>>n;
-	while(i<=n)
-	{
-			sum=i*i;
-		i++;
-	}
-	cout<<"sum of series ="<<sum;
+	int a,b,c;
+	printf("Enter any number=");
+	scanf("%d%d",&a,&b);
+	c=a+b;
+	printf("%d",c);
 	return 0;
 }

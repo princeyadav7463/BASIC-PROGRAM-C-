@@ -1,19 +1,34 @@
 #include<stdio.h>
-#include<conio.h>
+void show(int[],int);
+int sum(int[],int);
 int main()
 {
-	char c;
-	printf("Enter any character=");
-	c=getch();
-	if(c>=65&&c<=90||c>=48&&c<=57||c>=97&&c<=122||c==32)
-	{
-		putch(c);
-		printf(" is not symbole");
-	}
-	else
-	{
-		putch(c);
-		printf(" is symbole");
-	}
+	int a[]={-3,2,-5,-6,7,3,2,-8};
+	int n= sizeof(a)/sizeof(int);
+	int res;
+	printf("print array element=\n");
+	show(a,n);
+	res=sum(a,n);
+	printf("sum of positive number in array elemetns=%d",res);
 	return 0;
+}
+void show(int a[],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+}
+int sum(int a[],int n)
+{
+	int sum=0,i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]>0)
+		{
+			sum=sum+a[i];
+		}
+	}
+	return sum;
 }
