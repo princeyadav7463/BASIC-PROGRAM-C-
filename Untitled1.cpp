@@ -1,17 +1,15 @@
-#include<stdio.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 int main()
 {
-	int c;
-	printf("Enter any character=");
-	c=getch();
-	if(c>=65&&c<=90||c>=97&&c<=122)
+	int i=1,n,sum=0;
+	cout<<"Enter any number=";
+	cin>>n;
+	while(i<=n)
 	{
-		printf("%c is alphabet",c);
+			sum=i*i;
+		i++;
 	}
-	else
-	{
-		putch(c);
-		printf("  is not alphabets");
-	}
+	cout<<"sum of series ="<<sum;
+	return 0;
 }
